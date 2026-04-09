@@ -110,7 +110,7 @@ export default function App() {
     const bmiCategory =
       bmi < 18.5 ? '低体重' :
       bmi < 25 ? '普通体重' :
-      bmi < 30 ? '肥満（1度）' : '肥満'
+      bmi < 30 ? '肥満(1度)' : '肥満'
 
     return {
       age,
