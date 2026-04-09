@@ -250,14 +250,24 @@ button {
 .list-box > div {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 12px;
   padding-bottom: 10px;
   border-bottom: 1px solid #e2e8f0;
   font-size: 14px;
 }
 
-.selected-row {
-  font-weight: 700;
+.list-box > div > span:last-child {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.list-box > div.selected-row {
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.list-box > div.selected-row span {
   color: #0f172a;
 }
 
