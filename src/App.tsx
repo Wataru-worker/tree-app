@@ -226,10 +226,7 @@ export default function App() {
           </motion.div>
         ) : (
           <motion.div initial={{ opacity: 0, x: 16 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.25 }} className="result-stack">
-            <button className="back-button" type="button" onClick={() => setScreen('form')}>
-              <ArrowLeft size={18} />
-              入力に戻る
-            </button>
+
 
             <section className="summary-text">
               あなたは <strong>{parsed?.age}歳</strong> の <strong>{form.sex === 'male' ? '男性' : '女性'}</strong> で、
@@ -296,6 +293,13 @@ export default function App() {
               <StatCard title="減量" value={`${parsed?.cutRange.low}〜${parsed?.cutRange.high} kcal`} icon={<TrendingDown size={20} />} />
               <StatCard title="増量" value={`${parsed?.gainRange.low}〜${parsed?.gainRange.high} kcal`} icon={<TrendingUp size={20} />} />
             </section>
+
+            <div className="back-button-wrap">
+              <button className="back-button" type="button" onClick={() => setScreen('form')}>
+                <ArrowLeft size={18} />
+                入力に戻る
+              </button>
+            </div>
           </motion.div>
         )}
       </div>
