@@ -162,8 +162,8 @@ export default function App() {
                 <div>
                   <label className="field-label">性別</label>
                   <div className="segmented">
-                    <button className={form.sex === 'male' ? 'segmented active flex-center' : 'segmented flex-center'} onClick={() => handleChange('sex', 'male')} type="button">男性</button>
-                    <button className={form.sex === 'female' ? 'segmented active flex-center' : 'segmented flex-center'} onClick={() => handleChange('sex', 'female')} type="button">女性</button>
+                    <button className={form.sex === 'male' ? 'active' : ''} onClick={() => handleChange('sex', 'male')} type="button">男性</button>
+                    <button className={form.sex === 'female' ? 'active' : ''} onClick={() => handleChange('sex', 'female')} type="button">女性</button>
                   </div>
                 </div>
 
@@ -252,11 +252,21 @@ export default function App() {
                     BMIは <strong>{parsed?.bmi.toFixed(1)}</strong>、判定は <strong>{parsed?.bmiCategory}</strong> です。
                   </p>
                   <div className="list-box">
-                    <div><span>18.5未満</span><span>低体重</span></div>
-                    <div><span>18.5〜24.9</span><span>普通体重</span></div>
-                    <div><span>25.0〜29.9</span><span>肥満（1度）</span></div>
-                    <div><span>30以上</span><span>肥満</span></div>
-                  </div>
+                    <div className={parsed?.bmi < 18.5 ? 'active-row' : ''}>
+                      <span>18.5未満</span><span>低体重</span>
+                    </div>
+
+                    <div className={parsed?.bmi >= 18.5 && parsed?.bmi < 25 ? 'active-row' : ''}>
+                      <span>18.5〜24.9</span><span>普通体重</span>
+                    </div>
+
+                    <div className={parsed?.bmi >= 25 && parsed?.bmi < 30 ? 'active-row' : ''}>
+                      <span>25.0〜29.9</span><span>肥満（1度）</span>
+                    </div>
+
+                    <div className={parsed?.bmi >= 30 ? 'active-row' : ''}>
+                      <span>30以上</span><span>肥満</span>
+                    </div>
                 </div>
               </section>
 
