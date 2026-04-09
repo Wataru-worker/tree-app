@@ -110,7 +110,7 @@ export default function App() {
     const bmiCategory =
       bmi < 18.5 ? '低体重' :
       bmi < 25 ? '普通体重' :
-      bmi < 30 ? '肥満(1度)' : '肥満'
+      bmi < 30 ? '肥満（1度）' : '肥満'
 
     return {
       age,
@@ -261,7 +261,7 @@ export default function App() {
 
   <div className={parsed?.bmi !== undefined && parsed.bmi >= 25 && parsed.bmi < 30 ? 'selected-row' : ''}>
     <span>25.0〜29.9</span>
-    <span>肥満(1度)</span>
+    <span>肥満（1度）</span>
   </div>
 
   <div className={parsed?.bmi !== undefined && parsed.bmi >= 30 ? 'selected-row' : ''}>
