@@ -67,9 +67,9 @@ export default function App() {
   const [screen, setScreen] = useState<Screen>('form')
   const [form, setForm] = useState<FormState>({
     sex: 'male',
-    age: '25',
-    height: '170',
-    weight: '65',
+    age: '',
+    height: '',
+    weight: '',
     bodyFat: '',
     activity: '1.2',
   })
@@ -162,8 +162,8 @@ export default function App() {
                 <div>
                   <label className="field-label">性別</label>
                   <div className="segmented">
-                    <button className={form.sex === 'male' ? 'segmented active' : 'segmented'} onClick={() => handleChange('sex', 'male')} type="button">男性</button>
-                    <button className={form.sex === 'female' ? 'segmented active' : 'segmented'} onClick={() => handleChange('sex', 'female')} type="button">女性</button>
+                    <button className={form.sex === 'male' ? 'segmented active flex-center' : 'segmented flex-center'} onClick={() => handleChange('sex', 'male')} type="button">男性</button>
+                    <button className={form.sex === 'female' ? 'segmented active flex-center' : 'segmented flex-center'} onClick={() => handleChange('sex', 'female')} type="button">女性</button>
                   </div>
                 </div>
 
