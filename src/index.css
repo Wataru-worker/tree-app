@@ -291,4 +291,10 @@ button {
     padding-left: 18px;
     padding-right: 18px;
   }
+  
+  .flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
