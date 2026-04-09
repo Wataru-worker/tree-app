@@ -272,6 +272,7 @@ export default function App() {
                       <span>肥満</span>
                     </div>
                   </div>
+                </div>
               </section>
 
               <section className="panel compact">
