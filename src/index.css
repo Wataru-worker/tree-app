@@ -1,0 +1,294 @@
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #0f172a;
+  background: #f8fafc;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.page-shell {
+  min-height: 100vh;
+  padding: 16px;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+}
+
+.app-container {
+  width: 100%;
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.panel,
+.stat-card,
+.hero-result {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 28px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+.panel.compact {
+  border-radius: 24px;
+}
+
+.panel__header {
+  padding: 28px 24px 8px;
+}
+
+.panel__content {
+  padding: 20px 24px 28px;
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.title-row h1,
+.panel__content h2,
+.stat-card__header p,
+.hero-result__label {
+  margin: 0;
+}
+
+.title-row h1 {
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.lead,
+.help-text,
+.muted-text,
+.summary-text,
+.info-box,
+.list-box,
+.hero-result__sub {
+  color: #475569;
+}
+
+.form-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.field-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.text-input,
+.select-input {
+  width: 100%;
+  height: 50px;
+  padding: 0 16px;
+  border-radius: 18px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+}
+
+.segmented {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.segmented button,
+.segmented {
+  border-radius: 18px;
+}
+
+.segmented button {
+  height: 50px;
+  border: 1px solid #cbd5e1;
+  background: #fff;
+}
+
+.segmented button.active {
+  background: #0f172a;
+  color: white;
+  border-color: #0f172a;
+}
+
+.primary-button,
+.back-button {
+  height: 52px;
+  border: none;
+  border-radius: 18px;
+  transition: 0.2s ease;
+}
+
+.primary-button {
+  background: #2563eb;
+  color: #fff;
+  font-weight: 700;
+}
+
+.primary-button:hover:not(:disabled) {
+  background: #1d4ed8;
+}
+
+.primary-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.info-box {
+  background: #f1f5f9;
+  padding: 18px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.info-stack {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.info-title {
+  font-weight: 700;
+  color: #0f172a;
+  margin: 0 0 2px;
+}
+
+.result-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.back-button {
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 14px;
+  background: #fff;
+  border: 1px solid #cbd5e1;
+}
+
+.summary-text {
+  padding: 0 4px;
+}
+
+.hero-result {
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.hero-result__label {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hero-result__value {
+  margin: 8px 0 6px;
+  font-size: clamp(30px, 5vw, 44px);
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.hero-result__sub {
+  margin: 0;
+}
+
+.result-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.two-col {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.one-col {
+  grid-template-columns: 1fr;
+}
+
+.big-number {
+  margin: 8px 0;
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.list-box {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.list-box > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e2e8f0;
+  font-size: 14px;
+}
+
+.selected-row {
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.stat-card {
+  padding: 20px;
+}
+
+.stat-card__header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #334155;
+  font-weight: 700;
+}
+
+.stat-card__value {
+  margin: 10px 0 0;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+@media (max-width: 760px) {
+  .two-col {
+    grid-template-columns: 1fr;
+  }
+
+  .title-row h1 {
+    font-size: 28px;
+  }
+
+  .panel__header,
+  .panel__content,
+  .hero-result {
+    padding-left: 18px;
+    padding-right: 18px;
+  }
+}
