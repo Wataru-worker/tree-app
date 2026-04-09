@@ -261,7 +261,7 @@ export default function App() {
 
   <div className={parsed?.bmi !== undefined && parsed.bmi >= 25 && parsed.bmi < 30 ? 'selected-row' : ''}>
     <span>25.0〜29.9</span>
-    <span>肥満（1度）</span>
+    <span>肥満(1度)</span>
   </div>
 
   <div className={parsed?.bmi !== undefined && parsed.bmi >= 30 ? 'selected-row' : ''}>
