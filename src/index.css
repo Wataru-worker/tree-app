@@ -129,6 +129,9 @@ button {
   height: 50px;
   border: 1px solid #cbd5e1;
   background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .segmented button.active {
@@ -291,10 +294,9 @@ button {
     padding-left: 18px;
     padding-right: 18px;
   }
-  
-  .flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+  .active-row {
+    font-weight: 700;
+    color: #0f172a;
   }
 }
