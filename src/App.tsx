@@ -253,21 +253,25 @@ export default function App() {
                   </p>
                   <div className="list-box">
                     <div className={parsed?.bmi < 18.5 ? 'selected-row' : ''}>
-                      <span>18.5未満</span><span>低体重</span>
+                      <span>18.5未満</span>
+                      <span>低体重</span>
                     </div>
 
                     <div className={parsed?.bmi >= 18.5 && parsed?.bmi < 25 ? 'selected-row' : ''}>
-                      <span>18.5〜24.9</span><span>普通体重</span>
+                      <span>18.5〜24.9</span>
+                      <span>普通体重</span>
                     </div>
 
                     <div className={parsed?.bmi >= 25 && parsed?.bmi < 30 ? 'selected-row' : ''}>
-                      <span>25.0〜29.9</span><span>肥満（1度）</span>
+                      <span>25.0〜29.9</span>
+                      <span>肥満(1度)</span>
                     </div>
 
                     <div className={parsed?.bmi >= 30 ? 'selected-row' : ''}>
-                      <span>30以上</span><span>肥満</span>
+                      <span>30以上</span>
+                      <span>肥満</span>
                     </div>
-                </div>
+                  </div>
               </section>
 
               <section className="panel compact">
