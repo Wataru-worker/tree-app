@@ -258,7 +258,6 @@ button {
 }
 
 .list-box > div > span:last-child {
-  width: 140px;
   text-align: right;
   white-space: nowrap;
   flex-shrink: 0;
