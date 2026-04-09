@@ -309,4 +309,14 @@ button {
     font-weight: 700;
     color: #0f172a;
   }
+  .back-button-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .back-button {
+    width: 220px;
+    justify-content: center;
+  }
 }
